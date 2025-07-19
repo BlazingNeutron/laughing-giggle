@@ -11,7 +11,7 @@ run:
 	sshpass -p$$TRILOBOT_PWD ssh $$TRILOBOT_USER@$$TRILOBOT_HOST 'bash -c "~/src/scripts/run.sh $(SCRIPT)"'
 
 upload:
-	sshpass -p$$TRILOBOT_PWD scp -r ~/src/ $$TRILOBOT_USER@$$TRILOBOT_HOST:~/src/
+	sshpass -p$$TRILOBOT_PWD scp -r . $$TRILOBOT_USER@$$TRILOBOT_HOST:~/src/
 
 clean:
 	sshpass -p$$TRILOBOT_PWD ssh $$TRILOBOT_USER@$$TRILOBOT_HOST 'rm -rf ~/src/ && mkdir -p ~/src/'

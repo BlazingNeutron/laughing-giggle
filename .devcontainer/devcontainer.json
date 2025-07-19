@@ -2,5 +2,12 @@
     "name": "Raspi Python Dev",
     "dockerFile": "Dockerfile",
     "runArgs": ["--env-file", ".devcontainer/.env"],
-    "postCreateCommand": "make init"
+    "postCreateCommand": "make init",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    }
 }
